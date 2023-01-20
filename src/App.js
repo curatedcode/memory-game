@@ -78,9 +78,9 @@ function App() {
         </div>
         <span className={`font-bold ${gameStatus === 'play screen' ? '':'hidden'} mx-auto mt-8 text-lg`}>High Score: {highScore}</span>
         <span className={`font-bold ${gameStatus === 'play screen' ? '':'hidden'} mx-auto mt-2 mb-8 text-3xl`}>Score: {score}</span>
-        <div className={`grid w-11/12 my-6 place-self-center place-items-center gap-4 grid-cols-3 ${gameStatus === 'play screen' ? '':'hidden'}`}>
+        <div className={`grid w-11/12 md:w-4/5 lg:w-1/2 my-6 place-self-center place-items-center gap-4 md:gap-8 grid-cols-3 md:grid-cols-4 ${gameStatus === 'play screen' ? '':'hidden'}`}>
           {
-            allCards.map(character => <img onClick={()=>handleCardClick(character.name)} key={character.name} className="can-hover:hover:bg-gray-800 can-hover:can-hover:cursor-pointer transition-all h-28 aspect-square shadow-lg bg-C-light-gray p-2 rounded-xl" src={character.link} alt='cartoon animal'></img>)
+            allCards.map(character => <img onClick={()=>handleCardClick(character.name)} key={character.name} className="can-hover:hover:bg-gray-800 can-hover:can-hover:cursor-pointer transition-all h-28 md:h-32 lg:h-40 aspect-square shadow-lg bg-C-light-gray p-2 rounded-xl" src={character.link} alt='cartoon animal'></img>)
           }
         </div>
         <div className={`bg-C-light-gray grid w-96 text-lg place-items-center absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 p-4 rounded-md shadow-xl ${gameStatus === 'end screen' ? '':'hidden'}`}>
