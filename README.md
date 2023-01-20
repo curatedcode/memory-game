@@ -1,4 +1,4 @@
-# Resume Builder
+# Memory Game
 
 This is a simple memory game. You click each image once, it shuffles after each click, and if you click the same image twice the game is over 
 
