@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Resume Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple memory game. You click each image once, it shuffles after each click, and if you click the same image twice the game is over 
 
-## Available Scripts
+My favorite part of this project was the cartoon animals. Originally I was going to use random objects but I saw the animals and new it would be perfect.
 
-In the project directory, you can run:
+### Future Features
+- Add multiple difficulties, i.e., you can select between 12, 16, 20, or 30 cards. 
 
-### `npm start`
+### How To Deploy Project Locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. This project requires you to have Node.js installed, refer to [their website](https://nodejs.org/en/download/) on how to get it installed.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Clone this repo to your local machine with one of the commands below. You can also read the GitHub documentation on [cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-### `npm test`
+```
+# If you have SSH set up with Git:
+git clone git@github.com:curatedcode/memory-game.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# For HTTPS:
+git clone https://github.com/curatedcode/memory-game.git
 
-### `npm run build`
+# Finally, GitHub CLI:
+gh repo clone curatedcode/memory-game
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. ```cd``` into the directory of your local clone.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Install the required packages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+``` 
+npm install
+```
 
-### `npm run eject`
+5. Finally build and serve the repo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Start Screen](https://i.postimg.cc/DzBSCKQW/Screenshot-from-2023-01-20-13-13-39.png)
+![Play Screen](https://i.postimg.cc/50y6Tkps/Screenshot-from-2023-01-20-13-14-08.png)
+![End Screen](https://i.postimg.cc/Bvq8cvF9/Screenshot-from-2023-01-20-13-14-43.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
