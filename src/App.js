@@ -68,29 +68,32 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[score])
   return (
-    <div className="grid">
-      <div className={`bg-C-light-gray grid columns-2 w-96 text-lg gap-x-4 gap-2 place-items-center absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 p-4 rounded-md shadow-xl ${gameStatus === 'start screen' ? '':'hidden'}`}>
-        <span className="col-span-2 font-bold text-3xl">Memory Game</span>
-        <p className="col-span-2 leading-tight mb-4 text-sm">Get points by clicking each image, if you click the same image twice the game is over!</p>
-        <span>High Score: {highScore}</span>
-        <button onClick={()=>setGameStatus('play screen')} className="bg-gray-700 py-1 px-6 rounded-lg shadow-md font-bold text-gray-300 can-hover:hover:bg-gray-900 transition-colors">Play</button>
+    <>
+      <div className="grid">
+        <div className={`bg-C-light-gray grid columns-2 w-96 text-lg gap-x-4 gap-2 place-items-center absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 p-4 rounded-md shadow-xl ${gameStatus === 'start screen' ? '':'hidden'}`}>
+          <span className="col-span-2 font-bold text-3xl">Memory Game</span>
+          <p className="col-span-2 leading-tight mb-4 text-sm">Get points by clicking each image, if you click the same image twice the game is over!</p>
+          <span>High Score: {highScore}</span>
+          <button onClick={()=>setGameStatus('play screen')} className="bg-gray-700 py-1 px-6 rounded-lg shadow-md font-bold text-gray-300 can-hover:hover:bg-gray-900 transition-colors">Play</button>
+        </div>
+        <span className={`font-bold ${gameStatus === 'play screen' ? '':'hidden'} mx-auto mt-8 text-lg`}>High Score: {highScore}</span>
+        <span className={`font-bold ${gameStatus === 'play screen' ? '':'hidden'} mx-auto mt-2 mb-8 text-3xl`}>Score: {score}</span>
+        <div className={`grid w-11/12 my-6 place-self-center place-items-center gap-4 grid-cols-3 ${gameStatus === 'play screen' ? '':'hidden'}`}>
+          {
+            allCards.map(character => <img onClick={()=>handleCardClick(character.name)} key={character.name} className="can-hover:hover:bg-gray-800 can-hover:can-hover:cursor-pointer transition-all h-28 aspect-square shadow-lg bg-C-light-gray p-2 rounded-xl" src={character.link} alt='cartoon animal'></img>)
+          }
+        </div>
+        <div className={`bg-C-light-gray grid w-96 text-lg place-items-center absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 p-4 rounded-md shadow-xl ${gameStatus === 'end screen' ? '':'hidden'}`}>
+          <span className="text-3xl">Score: {score}</span>
+          <span>High Score: {highScore}</span>
+          <button onClick={()=>{
+            setGameStatus('start screen')
+            setScore(0)
+          }} className="bg-gray-700 py-1 px-6 rounded-lg shadow-md font-bold text-gray-300 can-hover:hover:bg-gray-900 transition-colors mt-4">Play Again</button>
+        </div>
       </div>
-      <span className={`font-bold ${gameStatus === 'play screen' ? '':'hidden'} mx-auto mt-8 text-lg`}>High Score: {highScore}</span>
-      <span className={`font-bold ${gameStatus === 'play screen' ? '':'hidden'} mx-auto mt-2 mb-8 text-3xl`}>Score: {score}</span>
-      <div className={`grid w-11/12 my-6 place-self-center place-items-center gap-4 grid-cols-3 ${gameStatus === 'play screen' ? '':'hidden'}`}>
-        {
-          allCards.map(character => <img onClick={()=>handleCardClick(character.name)} key={character.name} className="can-hover:hover:bg-gray-800 can-hover:can-hover:cursor-pointer transition-all h-28 aspect-square shadow-lg bg-C-light-gray p-2 rounded-xl" src={character.link} alt='cartoon animal'></img>)
-        }
-      </div>
-      <div className={`bg-C-light-gray grid w-96 text-lg place-items-center absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/3 p-4 rounded-md shadow-xl ${gameStatus === 'end screen' ? '':'hidden'}`}>
-        <span className="text-3xl">Score: {score}</span>
-        <span>High Score: {highScore}</span>
-        <button onClick={()=>{
-          setGameStatus('start screen')
-          setScore(0)
-        }} className="bg-gray-700 py-1 px-6 rounded-lg shadow-md font-bold text-gray-300 can-hover:hover:bg-gray-900 transition-colors mt-4">Play Again</button>
-      </div>
-    </div>
+      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-sm">Cartoon Animals by: <a href="https://www.vecteezy.com/members/herupujiutomo480266" className="can-hover:hover:text-gray-800 transition-colors">herupujiutomo480266</a></span>
+    </>
   );
 }
 
